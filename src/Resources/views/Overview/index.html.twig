@@ -1,0 +1,7 @@
+{% for key,group in groups %}
+    <ul>
+        {% for entity in group.entities %}
+            <li><a href="{{ path( 'ez_legacy', { 'module_uri': '/sfentity/view/' ~ entity.entity } ) }}">{{ 'collected data from'|trans }} {{ entity.name }}</a> ({{ 'node'|trans }}: <a href="/administration/content/view/full//{{ entity.locationId }}">{{ entity.name }}</a>)</li>
+        {% endfor %}
+    </ul>
+{% endfor %}

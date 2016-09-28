@@ -1,0 +1,23 @@
+{
+    "name": "styleflasher/entityexportbundle",
+    "description": "Doctrine Entity Export Bundle eZ Publish v5",
+    "authors": [
+        {
+            "name": "Andreas Adelsberger",
+            "email": "andreas.adelsberger@styleflasher.at"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/MisatoTremor/AvroCsvBundle"
+        }
+    ],
+    "require": {
+        "avro/csv-bundle": "dev-fix_type_hints_and_cs"
+    },
+    "autoload": {
+        "psr-4": { "Styleflasher\\EntityExportBundle\\": "src/" }
+    }
+}

@@ -1,0 +1,19 @@
+<h1>{{ name }} - ({{locationName}})</h1>
+<div class="broad-table">
+<table>
+    <tr>
+        {% for column in columns %}
+            <th>{{column}}</th>
+            {% endfor%}
+    </tr>
+    {% for entity in entities %}
+        <tr>
+            {% for column in columns %}
+                <td>{{attribute(entity, columns[loop.index0])|raw}}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+</div>
+<br />
+<a href="{{ path( 'ez_legacy', { 'module_uri': '/sfentity/export/' ~ name|lower } ) }}">Export CSV</a>

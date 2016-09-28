@@ -1,0 +1,22 @@
+#    styleflasher_entity_export.example:
+#        class: Styleflasher\EntityExportBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+services:
+    styleflasher_entity_export.helper:
+        class: Styleflasher\EntityExportBundle\Service\Helper
+        arguments: [@ezpublish.api.service.location, @ezpublish.config.resolver, %styleflasher_entity_export.groups%]
+    styleflasher.entity_export.view.controller:
+        class: Styleflasher\EntityExportBundle\Controller\ViewController
+        calls:
+         # This setter is mandatory to be able to use all shorthand methods
+            - [setContainer, [@service_container]]
+    styleflasher.entity_export.export.controller:
+        class: Avro\CsvBundle\Controller\ExportController
+        calls:
+         # This setter is mandatory to be able to use all shorthand methods
+            - [setContainer, [@service_container]]
+    styleflasher.entity_export.overview.controller:
+        class: Styleflasher\EntityExportBundle\Controller\OverviewController
+        calls:
+         # This setter is mandatory to be able to use all shorthand methods
+            - [setContainer, [@service_container]]

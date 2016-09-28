@@ -1,0 +1,3 @@
+#styleflasher_entity_export_homepage:
+#    path:     /hello/{name}
+#    defaults: { _controller: StyleflasherEntityExportBundle:Default:index }
