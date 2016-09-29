@@ -12,11 +12,11 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/MisatoTremor/AvroCsvBundle"
+            "url": "https://github.com/styleflasher/AvroCsvBundle"
         }
     ],
     "require": {
-        "avro/csv-bundle": "dev-fix_type_hints_and_cs"
+        "avro/csv-bundle": "delimiter_config"
     },
     "autoload": {
         "psr-4": { "Styleflasher\\EntityExportBundle\\": "src/" }
