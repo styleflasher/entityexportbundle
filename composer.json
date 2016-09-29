@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "avro/csv-bundle": "delimiter_config"
+        "avro/csv-bundle": "dev-delimiter_config"
     },
     "autoload": {
         "psr-4": { "Styleflasher\\EntityExportBundle\\": "src/" }
