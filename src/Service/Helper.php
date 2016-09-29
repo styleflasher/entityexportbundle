@@ -90,6 +90,6 @@ class Helper
 
     public function generateLink($url)
     {
-        return '<a href="/'.$url.'" _target="_blank">'.$url.'</a>';
+        return '<a href="/'.$url.'" target="_blank">'.$url.'</a>';
     }
 }
